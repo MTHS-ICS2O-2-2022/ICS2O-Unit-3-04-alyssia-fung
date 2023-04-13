@@ -2,7 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="description" content="convert fahrenheit To Celsius, with JavaScript" />
+    <meta
+      name="description"
+      content="convert fahrenheit To Celsius, with JavaScript"
+    />
     <meta name="keywords" content="mths, ics2o" />
     <meta name="author" content="Alyssia fung" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -26,7 +29,9 @@
     <script src="./js/script.js"></script>
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
       <div class="mdl-layout__header-row">
-        <span class="mdl-layout-title">convert fahrenheit To Celsius with JS </span>
+        <span class="mdl-layout-title"
+          >convert fahrenheit To Celsius with JS
+        </span>
       </div>
       <main class="mdl-layout__content">
         <tr>
@@ -43,16 +48,16 @@
             <h3>f = ( °F − 32) * 5/9 = °C</h3>
             <!-- Simple Textfield -->
             <form action="#">
-            <p>pcelsius</p>
+              <p>pcelsius</p>
               <div class="mdl-textfield mdl-js-textfield">
                 <input
                   class="mdl-textfield__input"
                   type="text"
                   pattern="-?[0-9]*(\.[0-9]+)?"
-                  id="celsius"
+                  id="fahrenheit"
                 />
-                <label class="mdl-textfield__label" for="celsius"
-                  >celsius...</label
+                <label class="mdl-textfield__label" for="fahrenheit"
+                  >fahrenheit...</label
                 >
                 <span class="mdl-textfield__error">Input is not a number!</span>
               </div>
@@ -61,12 +66,13 @@
             <!-- Raised button with ripple -->
             <button
               class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-              onclick="calculate()">
+              onclick="calculate()"
+            >
               Calculate
             </button>
             <br />
-            <divid="celsius">
-            </div>
+            <br />
+            <div id="celsius"></div>
           </th>
         </tr>
       </main>
