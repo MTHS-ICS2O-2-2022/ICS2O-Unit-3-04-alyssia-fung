@@ -1,5 +1,22 @@
-// Copyright (c) 2020 Mr. Coxall All rights reserved
+// Copyright (c) 2023 Alyssia Fung. All rights reserved.
 //
-// Created by: Mr. Coxall
-// Created on: Sep 2020
-// This file contains the JS functions for index.html
+// Created by: Alyssia Fung
+// Created on: Mar 2023
+// This file contains the JavaScript functions for index.html
+
+/**
+ * This function converts Fahrenheit to Celsius
+ */
+"use strict"
+
+function calculate() {
+  // input
+  const fahrenheit = parseInt(document.getElementById("Fahrenheit").value)
+
+  // process
+  const celsius = ((fahrenheit - 32) * 5) / 9
+
+  // output
+  document.getElementById("celsius").innerHTML =
+    "The Celsius is: " + celsius.toFixed(2) + " °C"
+}
