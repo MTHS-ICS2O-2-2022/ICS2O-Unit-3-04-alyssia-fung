@@ -1,32 +1,31 @@
 // Created by: Alyssia fung
-// Created on: Mar 2023
+// Created on: April 2023
 //
-// This program finds the volume of a sphere
+// This program converts Fahrenheit to Celsius
 
 package main
 
 import (
 	"fmt"
-	"math"
 )
 
 func main() {
-	// Define the variables for the sphere's radius
-	var radius float64
-	var volume float64
+	// converts Fahrenheit to Celsius
+	var fahrenheit float64
+	var celsius float64
 
 	// input
-	fmt.Println("This program finds the volume of a sphere")
+	fmt.Println("This program converts Fahrenheit to Celsius")
 	fmt.Println()
-	fmt.Println("Enter the radius (in cm): ")
-	fmt.Scanln(&radius)
+	fmt.Println("Enter the fahrenheit ")
+	fmt.Scanln(&fahrenheit)
 	fmt.Println()
 
 	// process
-	volume = (4.0 / 3.0) * math.Pi * math.Pow(radius, 3)
+	celsius = ((fahrenheit - 32) * 5) / 9
 
 	// output
-	// print out the calculated volume of the sphere
-	fmt.Printf("The volume is: %.2f cm³\n", volume)
+	// print out the converts Fahrenheit to Celsius
+	fmt.Printf("The celsius is: %.2f ℃\n", celsius)
 	fmt.Println("\nDone.")
 }

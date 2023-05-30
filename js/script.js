@@ -10,14 +10,26 @@
 "use strict"
 
 function calculate() {
+  // Get the Fahrenheit value from the query string
+  const urlParams = new URLSearchParams(window.location.search)
+  const fahrenheit = parseFloat(urlParams.get("fahrenheit"))
 
-  // input
-  const fahrenheit = parseInt(document.getElementById("fahrenheit").value)
+  // Input validation
+  if (isNaN(fahrenheit)) {
+    document.getElementById("conversion").innerHTML = "Invalid Fahrenheit value"
+    return
+  }
 
-  // process
-  const celsius = ((fahrenheit - 32) * 5) / 9;
+  // Process
+  const celsius = (fahrenheit - 32) * (5 / 9)
 
-  // output
-  document.getElementById("celsius").innerHTML =
-    "The celsius is: " + celsius.toFixed(2) + " °C"
+  // Output
+  document.getElementById("conversion").innerHTML =
+    "f = " +
+    fahrenheit +
+    "<br>Converted to Celsius: " +
+    celsius.toFixed(2) +
+    "°C"
 }
+
+window.onload = calculate
